@@ -20,4 +20,10 @@ of a userland system call wrapper in both C and Rust with 4 return values, used
 them to write three functions of varying complexities, and compiled each (with
 optimizations) to Thumb assembly to see what the resulting binaries actually do.
 
-The results are in `test.c.s` for the C version and `test.rs.s` for the Rust version.
+The results are in
+- `test.c.s` for the C version with system call arguments and return
+  values in the same pointer
+- `test2.c.s` for the C version keeping the current semantics and
+  adding pointers for additional return values
+- `test.rs.s` for the Rust version
+respectively.
