@@ -3,7 +3,7 @@ all: test.c.s test.rs.s
 
 .PHONY: clean
 clean:
-	rm test.c.s test.rs.s
+	rm -f test.c.s test.rs.s
 
 test.c.s: test.c test.h
 	arm-none-eabi-gcc -O3 -S $< -o $@
